@@ -1,6 +1,8 @@
 package p9ch1
 
-import "fmt"
+import (
+	"strconv"
+)
 
 type Hashtable struct {
 	array []int
@@ -16,9 +18,17 @@ func New() *Hashtable {
 // Add the pair
 func (h *Hashtable) Add(k string, v int) {
 	index := hash(k) % len(h.array)
-	fmt.Println(index)
+	h.array[index] = v
 }
 
 func hash(v string) int {
 	return len(v)
+}
+
+func (h Hashtable) String() string {
+	s := ""
+	for k, v := range h.array {
+		s += strconv.Itoa(k) + " " + strconv.Itoa(v) + "\n"
+	}
+	return s
 }
