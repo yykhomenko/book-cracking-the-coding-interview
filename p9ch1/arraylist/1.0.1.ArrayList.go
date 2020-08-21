@@ -12,6 +12,10 @@ func New() *ArrayList {
 	return l
 }
 
+func (l *ArrayList) Add(e int) {
+	l.raw = append(l.raw, e)
+}
+
 func (l ArrayList) String() string {
 	return fmt.Sprint(l.raw)
 }
