@@ -6,12 +6,6 @@ type ArrayList struct {
 	raw []int
 }
 
-func New() *ArrayList {
-	l := new(ArrayList)
-	l.raw = make([]int, 5)
-	return l
-}
-
 func (l *ArrayList) Add(e int) {
 	l.raw = append(l.raw, e)
 }
