@@ -1,4 +1,4 @@
-package p9ch1
+package hashtable
 
 import (
 	"strconv"
